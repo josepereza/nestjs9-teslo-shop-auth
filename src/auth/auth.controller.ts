@@ -18,6 +18,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { LoginUserDto } from './dto/login-user.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import { User } from './entities/user.entity';
+import { RolGuard } from './guards/rol/rol.guard';
 
 @Controller('auth')
 export class AuthController {
@@ -50,5 +51,11 @@ export class AuthController {
       rawHeaders,
       headers,
     };
+  }
+
+  @Get('privateAdmin')
+  @UseGuards(AuthGuard(), RolGuard)
+  testinAdmin() {
+    return { stado: 'privateAdmin' };
   }
 }
