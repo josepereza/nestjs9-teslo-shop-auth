@@ -25,7 +25,9 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
+## Frontend
+* https://github.com/josepereza/nest8-teslo-shop-front
+* 
 ## Installation
 
 ```bash
